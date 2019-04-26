@@ -62,14 +62,16 @@ html {
 
 /*<-----------------Start Norfolk Island Styling-------------------->*/
 #NI_Body {
-    padding: 10px;
+    padding: 20px;
+    background-image: url("wood.jpg");
 }
 .Gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .Section_Text {
-    background-image: url("limestone1.jpg");
+    background-image: url("oldpaper2.jpg");
+    padding: 10px;
 }
 .Gallery img {
     width: 100%;
@@ -81,11 +83,6 @@ html {
 }
 #NI_Main_Content h2 {
     display: none;
-}
-#NI_Main_Content > * {
-    border-style: solid;
-    border-color: dimgrey;
-    border-width: medium;
 }
 /*<-----------------End Norfolk Island Styling-------------------->*/
 
