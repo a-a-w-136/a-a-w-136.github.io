@@ -64,6 +64,18 @@ html {
 #NI_Body {
     padding: 10px;
 }
+.Gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.Gallery img {
+    width: 100%;
+    align-self: center;
+    padding: 10px;
+}
+.Gallery h4 {
+    display: none;
+}
 #NI_Main_Content h2 {
     display: none;
 }
