@@ -68,6 +68,9 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.Section_Text {
+    background-image: url("oldpaper.jpg");
+}
 .Gallery img {
     width: 100%;
     align-self: center;
@@ -84,6 +87,6 @@ html {
     border-color: dimgrey;
     border-width: medium;
 }
-
+/*<-----------------End Norfolk Island Styling-------------------->*/
 
 
