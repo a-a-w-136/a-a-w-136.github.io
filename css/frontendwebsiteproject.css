@@ -70,6 +70,7 @@ html {
 }
 .Section_Text {
     background-image: url("oldpaper.jpg");
+    background-size: cover;
 }
 .Gallery img {
     width: 100%;
