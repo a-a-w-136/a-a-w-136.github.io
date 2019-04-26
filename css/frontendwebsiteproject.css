@@ -1,11 +1,11 @@
 /*Colours #CCDBDC #003249 #FFF8F0 #212922 #BA2D0B*/
-/*<---------------Start Index Styling--------------------->*/
 html {
     box-sizing: border-box;
 }
 * , *:after, *:before {
     box-sizing: inherit;
 }
+/*<---------------Start Index Styling--------------------->*/
 #indexbody {
     padding: 10px;
     color: #FFF8F0;
@@ -59,3 +59,19 @@ html {
     }
 }
 /*<-----------------End Index Styling-------------------->*/
+
+/*<-----------------Start Norfolk Island Styling-------------------->*/
+#NI_Body {
+    padding: 10px;
+}
+#NI_Main_Content h2 {
+    display: none;
+}
+#NI_Main_Content > * {
+    border-style: solid;
+    border-color: dimgrey;
+    border-width: medium;
+}
+
+
+
