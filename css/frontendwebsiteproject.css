@@ -1,3 +1,5 @@
+/*Colours #CCDBDC #003249 #FFF8F0 #212922 #BA2D0B*/
+/*<---------------Start Index Styling--------------------->*/
 html {
     box-sizing: border-box;
 }
@@ -5,6 +7,55 @@ html {
     box-sizing: inherit;
 }
 #indexbody {
-    color: #CCDBDC;
+    padding: 10px;
+    color: #FFF8F0;
     background-color: #003249;
+    height: 100vh;
+    display: flex;  /*#aggrheadermain and #indexfooter are elements of the flex*/
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
 }
+#aggrheadermain {
+    height: 90vh;
+}
+#indexheader {
+    margin: 15vh 0vw 5vh 0vw;
+}
+#indexfooter {
+    height: 10vh;
+    width: 98vw;
+    padding: 10px;
+    font-size: .75em;
+    border-top-color: #FFF8F0;
+    border-top-style: solid;
+    border-top-width: thin;
+}
+#indexmain {
+    display: flex;
+    flex-direction: column; /*'#indexbody main a' tags are the elements.*/
+    align-items: center;
+}
+#indexheader h1 {
+    text-align: center;
+}
+#indexbody main a {
+    color: #CCDBDC;
+    margin: 2vh;
+    padding: 2px;
+    font-size: .90em;
+}
+@media(min-width:300px) {
+    #indexheader h1 {
+        font-size: 1.5em;
+    }
+    #indexbody main a {
+        font-size: 1em;
+    }
+}
+@media(min-width:600px) {
+     #indexheader h1 {
+        font-size: 3em;
+    }
+}
+/*<-----------------End Index Styling-------------------->*/
