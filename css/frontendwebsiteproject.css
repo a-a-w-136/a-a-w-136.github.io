@@ -61,29 +61,7 @@ html {
 /*<-----------------End Index Styling-------------------->*/
 
 /*<-----------------Start Norfolk Island Styling-------------------->*/
-#NI_Body {
-    padding: 20px;
-    background-image: url("wood.jpg");
-}
-.Gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-.Section_Text {
-    background-image: url("oldpaper2.jpg");
-    padding: 10px;
-}
-.Gallery img {
-    width: 100%;
-    align-self: center;
-    padding: 10px;
-}
-.Gallery h4 {
-    display: none;
-}
-#NI_Main_Content h2 {
-    display: none;
-}
+
 /*<-----------------End Norfolk Island Styling-------------------->*/
 
 
