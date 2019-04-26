@@ -4,3 +4,7 @@ html {
 * , *:after, *:before {
     box-sizing: inherit;
 }
+#indexbody {
+    color: #CCDBDC;
+    background-color: #003249;
+}
