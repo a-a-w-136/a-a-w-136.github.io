@@ -126,6 +126,7 @@ html {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+    font-family: cursive;
 }
 /*End - Formatting for Header section*/
 
