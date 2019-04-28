@@ -63,11 +63,17 @@ html {
 /*<-----------------Start Norfolk Island Styling-------------------->*/
 
 /*Start - Set default(global) styles*/
+#NI_Main {
+    background-image: url("wood.jpg");
+    padding: 0px 10px 0px 10px;
+}
 #NI_Body {
     min-width: 180px;
 }
-#NI_Main {
-    padding: 0px 10px 0px 10px;
+#NI_Main_Content {
+    padding: 10px 0px 10px 0px;
+     max-width: 1000px;
+    margin: auto;
 }
 .NI_Section {
     background-color: #CCDBDC;
@@ -135,7 +141,6 @@ html {
     background-color: #003249;
     color: #D3D0CB;
     height: 30vh;
-    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -168,6 +173,9 @@ html {
     border-bottom-style: solid;
     border-bottom-color: #4F3824;
     border-bottom-width: thin;
+}
+#NI_Locations {
+    margin-bottom: 0px;
 }
 /*End - Formatting for Locations section*/
 
