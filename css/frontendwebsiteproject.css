@@ -250,9 +250,119 @@ html {
     }
 }
 /*End - Formatting for Locations section for Large size screen*/
+/*<----------------------------------End Norfolk Island Styling------------------------------>*/
+
+/*<----------------------------------Start Rational Styling------------------------------>*/
+#Rational_Body {
+    background-color: #CCDBDC;
+    padding: 20px;
+}
+#Rational_Header {
+    background-color: white;
+    text-align: center;
+    max-width: 600px;
+    min-width: 400px;
+    margin: auto;
+}
+.Rational_Img {
+    width: 100%;
+    border-color: #363636;
+    border-style: solid;
+    margin: auto;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    display: block;
+}
+.Rational_Section {
+    background-color: white;
+    max-width: 600px;
+    min-width: 400px;
+    margin: auto;
+    padding: 0px 20px 20px 20px;
+}
+#Wire_Frames {
+    display: flex;
+    flex-direction: column;
+}
+#Wire_Frames li label {
+    display: block;
+    margin: 2px 0px 10px 0px;
+    font-family: sans-serif;
+}
+#Document_Outline li {
+    list-style: decimal;
+    padding: 2px 0px 2px 0px;
+    margin-left: 20px;
+}
+#Logical_Ordering li {
+    list-style: decimal;
+    padding: 2px 0px 2px 0px;
+    margin-left: 20px;
+}
+#Inspiration_Links li {
+    list-style: circle;
+    padding: 2px 0px 2px 0px;
+    margin-left: 20px;
+}
+#Rational_Main p {
+    font-family: serif;
+    line-height: 130%;
+    padding-bottom: 5px;
+}
+#Rational_Header h1 {
+    font-size: 1.40em;
+    text-align: center;
+    font-family: sans-serif;
+    margin: auto;
+    font-weight: bold;
+    padding: 10px 0px 10px 0px;
+}
+#Rational_Article h2 {
+    display: none;
+}
+.Rational_Section h3 {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    border-bottom-style: solid;
+    border-bottom-color: #4F3824;
+    border-bottom-width: thin;
+    padding: 6px 0px 6px 0px;
+    font-weight: bold;
+}
+#NI_Body h4 {
+    margin-bottom: 5px;
+    font-size: 1.15em;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 6px 0px 6px 0px;
+    font-weight: bold;
+}
+#NI_Body h5 {
+     margin-bottom: 5px;
+    font-size: 1.05em;
+    font-family: sans-serif;
+    padding: 6px 0px 6px 0px;
+    font-weight: bold;
+}
+#NI_Main_Content h2 {
+    display: none;
+}
+td {
+    border-style: solid;
+    border-color: #4F3824;
+    border-width: thin;
+    padding: 5px;
+}
+th {
+    border-style: solid;
+    border-color: #4F3824;
+    border-width: thin;
+    padding: 5px;
+}
 
 
 
-/*<-----------------End Norfolk Island Styling-------------------->*/
 
-
+/*<----------------------------------End Rational Styling------------------------------>*/
