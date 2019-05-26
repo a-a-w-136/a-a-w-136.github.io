@@ -1,368 +1,867 @@
-/*Colours #63372C #003249 #080F0F #E1E5F2 #D3D0CB #813405 #4F3824 #363636*/
+/*Colours #63372C #003249 #080F0F #E1E5F2 #813405 #4F3824 #363636*/
 html {
     box-sizing: border-box;
+    height: 100%;
 }
 * , *:after, *:before {
     box-sizing: inherit;
 }
-/*<---------------Start Index Styling--------------------->*/
-#indexbody {
-    padding: 10px;
-    color: #FFF8F0;
-    background-color: #003249;
-    height: 100vh;
-    display: flex;  /*#aggrheadermain and #indexfooter are elements of the flex*/
-    flex-direction: column;
-    align-items: center;
-    font-family: sans-serif;
+/*Start Landing-Header Styling*/
+body {
+    height: 100%;
 }
-#aggrheadermain {
-    height: 90vh;
+.Menu_Button {
+    margin: 0px auto 0px auto;
+    background-color: transparent;
+    border-style: none;
 }
-#indexheader {
-    margin: 15vh 0vw 5vh 0vw;
+.Line_Button {
+    height: 25px;
+    width: 30px;
 }
-#indexfooter {
-    height: 10vh;
-    width: 98vw;
-    padding: 10px;
-    font-size: .75em;
-    border-top-color: #FFF8F0;
-    border-top-style: solid;
-    border-top-width: thin;
-}
-#indexmain {
-    display: flex;
-    flex-direction: column; /*'#indexbody main a' tags are the elements.*/
-    align-items: center;
-}
-#indexheader h1 {
-    text-align: center;
-}
-#indexbody main a {
-    color: #CCDBDC;
-    margin: 2vh;
-    padding: 2px;
-    font-size: .90em;
-}
-@media(min-width:300px) {
-    #indexheader h1 {
-        font-size: 1.5em;
-    }
-    #indexbody main a {
-        font-size: 1em;
-    }
-}
-@media(min-width:600px) {
-     #indexheader h1 {
-        font-size: 3em;
-    }
-}
-/*<----------------------------End Index Styling-------------------->*/
-
-/*<-----------------Start Norfolk Island Styling-------------------->*/
-
-/*Start - Set default(global) styles*/
-#NI_Main {
-    background-image: url("wood.jpg");
-    padding: 0px 10px 0px 10px;
-}
-#NI_Body {
-    min-width: 180px;
-}
-#NI_Main_Content {
-    padding: 10px 0px 10px 0px;
-     max-width: 1000px;
-    margin: auto;
-}
-.NI_Section {
-    background-color: #CCDBDC;
-    margin: 0px 0px 10px 0px;
-    padding: 10px;
-}
-.NI_Img {
-    border-color: #363636;
-    border-style: solid;
-    border-radius: 2px 2px 2px 2px;
-    border-width: 2px 2px 10px 2px;
-}
-#NI_Main p {
-    margin-bottom: 10px;
-    font-family: serif;
-    line-height: 130%;
-}
-#NI_Body h1 {
-    font-size: 2em;
-    text-align: center;
-    font-family: cursive;
-    margin: auto;
-    font-weight: bold;
-}
-#NI_Body h2 {
-    margin-bottom: 5px;
-    font-size: 1.60em;
-    font-family: cursive;
-    text-align: center;
-    font-weight: bold;
-}
-#NI_Body h3 {
-    margin-bottom: 5px;
-    font-size: 1.40em;
-    font-family: cursive;
-    text-align: center;
-    border-bottom-style: solid;
-    border-bottom-color: #4F3824;
-    border-bottom-width: thin;
-    padding: 6px 0px 6px 0px;
-    font-weight: bold;
-}
-#NI_Body h4 {
-    margin-bottom: 5px;
-    font-size: 1.15em;
-    text-align: center;
-    font-family: cursive;
-    padding: 6px 0px 6px 0px;
-    font-weight: bold;
-}
-#NI_Body h5 {
-     margin-bottom: 5px;
-    font-size: 1.05em;
-    font-family: cursive;
-    padding: 6px 0px 6px 0px;
-    font-weight: bold;
-}
-#NI_Main_Content h2 {
-    display: none;
-}
-/*End - Set default styles*/
-
-/*Start - Formatting for Header section*/
-#NI_Header {
-    background-color: #003249;
-    color: #D3D0CB;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
-}
-/*End - Formatting for Header section*/
-
-/*Start - Formatting for Introduction section*/
-#NI_Introduction_Captain_Cook {
-    width:100%;
-}
-/*End - Formatting for Introduction section*/
-
-/*Start - Formatting for History section*/
-#NI_History_KAVHA_Buildings ul li {
-    padding-bottom: 10px;
-    margin-left: 20px;
-}
-#NI_History_KAVHA_Buildings ul {
-    list-style: outside;
-}
-#NI_History_Government_House_img {
-    width: 100%;
-}
-/*End - Formatting for History section*/
-
-/*Start - Formatting for Locations section*/
-.NI_Locations_Img {
-    width: 100%;
-}
-.NI_Location_Section {
-    border-bottom-style: solid;
-    border-bottom-color: #4F3824;
-    border-bottom-width: thin;
-}
-#NI_Locations {
-    margin-bottom: 0px;
-}
-/*End - Formatting for Locations section*/
-
-/*Start - Formatting for Footer section*/
-#NI_Footer {
-    background-color: #003249;
-    height: 20vh;
-    display: flex;
-    flex-direction: column;
-    color: #D3D0CB;
-}
-#NI_Footer h2 {
-    display: none;
-}
-#NI_Footer p {
-    margin: auto 0px auto 20px;
-}
-/*End - Formatting for Footer section*/
-
-/*Start - Formatting for Introduction section for medium size screen*/
-@media(min-width:450px) {
-    #NI_Introduction_Captain_Cook {
-        float: left;
-        width: inherit;
-        margin-right: 15px;
-    }
-    #NI_Locations_Royal_Engineers_Office {
-        height: 50%;
-    }
-    #NI_Main {
-        padding: 0px 20px 0px 20px;
-    }
-    #NI_Header {
-        font-size: 2.2em;
-    }
-}
-/*End - Formatting for Introduction section*/
-
-/*Start - Formatting for Locations section for medium size screen*/
-@media(min-width:600px) {
-    .NI_Locations_Img {
-        float: right;
-        max-width: 400px;
-        margin-left: 15px;
-    }
-    #NI_Locations {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-    }
-}
-/*End - Formatting for Locations section for medium size screen*/
-
-/*Start - Formatting for Locations section for Large size screen*/
-@media(min-width:850px) {
-    .NI_Location {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .NI_Locations_Img {
-        align-self: center;
-    }
-    #NI_History_Major_Buildings {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-    #NI_History_Government_House_img {
-        max-width: 400px;
-        margin-left: 15px;
-        margin-bottom: 10px;
-    }
-}
-/*End - Formatting for Locations section for Large size screen*/
-/*<----------------------------------End Norfolk Island Styling------------------------------>*/
-
-/*<----------------------------------Start Rational Styling------------------------------>*/
-#Rational_Body {
-    background-color: #CCDBDC;
-    padding: 20px;
-}
-#Rational_Header {
+.line1 {
+    height: 5px;
+    width: 30px;
     background-color: white;
-    text-align: center;
-    max-width: 600px;
-    min-width: 400px;
-    margin: auto;
+    margin-bottom: 5px;
+    border-radius: 10px;
 }
-.Rational_Img {
-    width: 100%;
-    border-color: #363636;
-    border-style: solid;
-    margin: auto;
-    border-style: solid;
-    border-width: thin;
-    border-color: black;
-    display: block;
-}
-.Rational_Section {
+.line2 {
+    height: 5px;
+    width: 30px;
     background-color: white;
-    max-width: 600px;
-    min-width: 400px;
-    margin: auto;
-    padding: 0px 20px 20px 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
 }
-#Wire_Frames {
+.line3 {
+    height: 5px;
+    width: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+#Main_Header_Wrapper_Background {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
-#Wire_Frames li label {
-    display: block;
-    margin: 2px 0px 10px 0px;
+#Main_Header_Wrapper {
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
     font-family: sans-serif;
+    letter-spacing: .1em;
 }
-#Document_Outline li {
-    list-style: decimal;
-    padding: 2px 0px 2px 0px;
-    margin-left: 20px;
+#Main_Header_Wrapper h1 {
+    color: #E1E5F2;
 }
-#Logical_Ordering li {
-    list-style: decimal;
-    padding: 2px 0px 2px 0px;
-    margin-left: 20px;
+#Main_Nav {
+    color: #E1E5F2;
 }
-#Inspiration_Links li {
-    list-style: circle;
-    padding: 2px 0px 2px 0px;
-    margin-left: 20px;
+.Main_Menu {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    height: 0px;
 }
-#Rational_Main p {
-    font-family: serif;
-    line-height: 130%;
+.Show_Menu {
+    height: 180px;
+    margin-top: 20px;
+}
+.Hide_Menu {
+    height: 0px;
+}
+#Main_Nav ul li {
+    margin: 0px 10px 20px 10px;
+    color: #E1E5F2;
+}
+#Main_Nav ul li a {
+    color: #E1E5F2;
+    text-decoration: none;
     padding-bottom: 5px;
 }
-#Rational_Header h1 {
+#Main_Nav ul li a:hover {
+    border-bottom: 2px solid #E1E5F2;
+}
+@media(max-width: 549px) {
+    #Main_Header_Wrapper {
+        padding: 20px 10px 10px 10px;
+        min-height: 20vh;
+    }
+    #Main_Nav {
+        margin-top: 10px;
+    }
+    #Main_Nav ul {
+        flex-direction: column;
+    }
+    #Menu_Display_Button {
+        display: block;
+        font-size: 1em;
+        text-align: center;
+    }
+    #Main_Header_Wrapper h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    #Main_Nav ul li {
+        color: #E1E5F2;
+        text-decoration: none;
+    }
+}
+@media(min-width: 550px) {
+    #Menu_Display_Button {
+        display: none;
+    }
+    #Main_Header_Wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 10px 10px 10px;
+        align-items: center;
+    }
+    .Main_Menu {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+    #Main_Header_Wrapper h1 {
+        font-size: 2.5em;
+        color: #E1E5F2;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+@media(max-width: 900px) {
+    #Parallax_Medium {
+        background-image: linear-gradient(white, rgb(0, 50, 73)), url("Entrance.png");
+        height: 70%;
+        width: 100%;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, cover;
+        background-blend-mode: multiply;
+    }
+    #Main_Header_Wrapper {
+        width: 100vw;
+    }
+    #Main_Header_Wrapper_Background {
+        background-color: #003249;
+    }
+}
+@media(min-width: 900px) {
+    #Main_Nav ul li {
+        margin: 10px 10px 10px 10px;
+    }   
+    #Main_Header_Wrapper_Background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+    #NI_Landing_Header {
+        background-image: linear-gradient(white, rgb(0, 50, 73)), url("Entrance.png");
+        height: 100%;
+        width: 100%;
+        background-attachment: scroll, fixed;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover, cover;
+        background-blend-mode: multiply;
+    }
+    #Main_Header_Wrapper h1 {
+        font-size: 2.5em;
+    }
+    #Main_Header_Wrapper {
+        flex-direction: row;
+        width: 80vw;
+        justify-content: space-around;
+    }
+    #Main_Header_Wrapper.Main_Header_Wrapper_Start {
+        border-bottom-color: #E1E5F2;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: transparent;
+        padding: 30px 10px 20px 10px;
+    }
+    #Main_Header_Wrapper.Main_Header_Wrapper_Moved {
+        border-bottom-style: none;
+        padding: 20px 10px 10px 10px;
+    }
+    #Main_Header_Wrapper_Background {
+        background-color: transparent;
+    }
+    #Main_Header_Wrapper_Background.Main_Header_Wrapper_Background_Start {
+        background-color: transparent;
+    }
+    #Main_Header_Wrapper_Background.Main_Header_Wrapper_Background_Moved {
+        background-color: #003249;
+    }
+    #Main_Header_Wrapper h1 {
+        text-align: none;
+    }
+}
+/*End Landing-Header Styling*/
+
+/*Start Landing - Main Styling*/
+.Landing_Main a {
+    text-decoration: none;
+/*    color: #363636;*/
+    padding-bottom: 5px;
+}
+.Landing_Main p {
+    padding-bottom: 5px;
+}
+
+.Introduction {
+/*    background-color: #D3D0CB;*/
+}
+.Introduction p:hover {
+    border-bottom: 2px solid #003249;
+}
+.Introduction h3 {
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+.Introduction h3 {
+    display: none;
+}
+.Overview  {
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Overview a {
+    align-self: flex-end;
+    margin: 10px 10px 0px 0px;
+}
+.Overview a:hover {
+    border-bottom: thin solid black;
+}
+.Overview img {
+    display: none;
+}
+
+.Overview h4 {
+    display: none;
+}
+.Overview blockquote {
+    font-style: italic;
+    font-family: sans-serif;
+    line-height: 1.40em;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color: black;
+    letter-spacing: .1em;
+}
+.Overview a {
+    color: black;
+    letter-spacing: .1em;
+    font-family: sans-serif;
+    font-size: .8em;
+}
+.Landing_Introduction_Separator {
+    width: 70%;
+    border-bottom: thin solid black;
+    margin: 0px auto 20px auto;
+}
+.Description {
+    padding-bottom: 30px;
+}
+.Description p {
+    font-family: sans-serif;
+    text-align: center;
+}
+.Description h4 {
+    display: none;
+}
+.Description img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.Description_Img_Overflow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Description a {
+    color: black;
+    letter-spacing: .1em;
+}
+.History {
+    padding: 25px 0px 25px 0px;
+    background-image: linear-gradient(black, white, gray), url("norfolk-island-27.JPG");
+    height: 100%;
+    width: 100%;
+    background-attachment: scroll, scroll;
+    background-position: center, top left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-blend-mode: multiply;
+}
+.History p {
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
     font-size: 1.40em;
-    text-align: center;
-    font-family: sans-serif;
-    margin: auto;
-    font-weight: bold;
-    padding: 10px 0px 10px 0px;
+    padding: 20px;
+    font-weight: 200;
+    letter-spacing: .04em;
+    margin-bottom: 30px;
 }
-#Rational_Article h2 {
+.History a:hover {
+    border-bottom: 2px solid #E1E5F2;
+}
+.History h3 a {
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+    font-size: 1.25em;
+    letter-spacing: .1em;
+}
+.History h3 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: .04em;
+}
+.Landing_History_Sub_Item {
+    font-size: .8em;
+    font-weight: 200;
+    letter-spacing: .04em;
+}
+.History h4 {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    letter-spacing: .1em;
+    margin-top: 30px;
+}
+.History img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 10px;
     display: none;
 }
-.Rational_Section h3 {
-    margin-bottom: 5px;
+.History_Img_Overflow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Locations {
+    padding: 25px 0px 20px 0px;
+    border-bottom: thin solid black;
+    margin: 0px 10px 0px 10px;
+}
+.Locations p {
+    font-family: sans-serif;
+    text-align: center;
+}
+.Locations p:hover {
+    border-bottom: 2px solid #363636;
+}
+.Locations h3 {
+    display: none;
+}
+.Locations img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.Locations_Img_Overflow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Locations a {
+    color: black;
+    letter-spacing: .1em;
+}
+.Gallery {
+    padding: 25px 0px 0px 0px;
+    margin: 0px 10px 25px 10px;
+}
+.Gallery p {
+    text-align: center;
+}
+.Gallery p:hover {
+    border-bottom: 2px solid black;
+}
+.Gallery p a {
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    letter-spacing: .1em;
+}
+.Gallery h3 {
+    display: none;
+}
+.Gallery img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.Gallery_Img_Overflow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Landing_Footer {
+    background-image: url("norfolk-island-27.JPG");
+    height: 100%;
+    width: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.Landing_Footer h2 {
+    color: white;
+    padding: 20px;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+}
+@media(min-width: 500px) {
+    .Description {
+        margin: auto;
+    }
+    .Description_Img_Overflow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Description_Img_Overflow img {
+        margin-right: 30px;
+    }
+    .Description_Img_Overflow p {
+        font-size: 1.25em;
+        display: inline-block;
+    }
+    .Description_Img_Text_Wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Locations_Img_Overflow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Locations_Img_Overflow img {
+        margin-right: 30px;
+    }
+    .Locations_Img_Overflow p {
+        font-size: 1.25em;
+        display: inline-block;
+    }
+    .Locations_Img_Text_Wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Gallery_Img_Overflow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .Gallery_Img_Overflow img {
+        margin-right: 30px;
+    }
+    .Gallery_Img_Overflow p {
+        font-size: 1.25em;
+        display: inline-block;
+    }
+     .Gallery_Img_Text_Wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media(min-width: 700px) {
+    .Overview blockquote {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .Description img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 0px;
+    }
+    .History img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 0px;
+    }
+    .Locations img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 0px;
+    }
+    .Gallery img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 0px;
+    }
+    .Locations {
+        margin: 0px 50px 0px 50px;
+    }
+    .Gallery {
+        margin: 0px 50px 25px 50px;
+    }
+}
+@media(min-width: 900px) {
+    .Landing_Footer {
+        background-image: url("norfolk-island-27.JPG");
+        height: 100%;
+        width: 100%;
+        background-attachment: fixed;
+        background-position: bottom left;
+        background-repeat:  no-repeat;
+        background-size: cover;
+    }
+    .History {
+        padding: 25px 0px 25px 0px;
+        background-image: linear-gradient(black, gray, white), url("norfolk-island-27.JPG");
+        height: 100%;
+        width: 100%;
+        background-attachment: scroll, fixed;
+        background-position: center, top left;
+        background-repeat: no-repeat, no-repeat;
+        background-size: cover, cover;
+        background-blend-mode: multiply;
+    }
+    .Landing_History_Sub {
+        display: grid;
+        grid-template-columns: repeat(4, 1f);
+    }
+    .Landing_History_Sub_Item_1 {
+        grid-column: 1 / span 1;
+    }
+    .Landing_History_Sub_Item_2 {
+        grid-column: 2 / span 1;
+    }
+    .Landing_History_Sub_Item_3 {
+        grid-column: 3 / span 1;
+    }
+    .Landing_History_Sub_Item_4 {
+        grid-column: 4 / span 1;
+    }
+}
+/*End Landing-Main styling*/
+
+/*Begin General Page styling*/
+#Page_Header_Wrapper_Background {
+    background-color: #003249;
+}
+*/
+#Main_Header_Wrapper.Page_Main_Wrapper_Header {
+    -webkit-transition: all 0s ease;
+    -moz-transition: all 0s ease;
+    -o-transition: all 0s ease;
+    transition: all 0s ease;
+}
+p {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.Page_Footer {
+    height: 20vh;
+    background-color: #003249;
+    color: white;
+    letter-spacing: .05em;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+} 
+.Page_Footer h2 {
+    padding: 20px;
+}
+.Introduction_Main {
+    max-width: 900px;
+    margin: 0px auto 0px auto;
+}
+.History_Main {
+    max-width: 900px;
+    margin: 0px auto 0px auto;
+}
+.Locations_Main {
+    max-width: 900px;
+    margin: 0px auto 0px auto;
+}
+@media(min-width: 900px) {
+    #Page_Header_Wrapper_Background {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+    }
+}
+/*End General Page styling*/
+
+/*Begin Introduction Page styling*/
+.Introduction_Main {
+    padding: 75px 10px 10px 10px;
+}
+.Introduction_Main h2 {
+    display: none;
+}
+.Introduction_Main h3 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: thin solid black;
+    display: inline-block;
+}
+.Introduction_Brief {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Brief_Body img {
+    margin: 10px auto 20px auto;
+    display: block;
+}
+.Page_Description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Description_Body {
+    text-align: left;
+}
+@media(min-width: 550px) {
+    .Brief_Body img {
+        float: left;
+        margin: 0px 20px 0px 20px;
+    }
+}
+@media(min-width: 900px) {
+    .Introduction_Main {
+        padding: 150px 10px 10px 10px;
+    }
+}
+/*End Introduction Page styling*/
+
+/*Begin History Page styling*/
+.History_Main {
+    padding: 75px 10px 10px 10px;
+}
+.History_Main h2 {
+    display: none;
+}
+.History_Main h3 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: bold;
+/*    padding-top: 10px;*/
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: thin solid black;
+    display: inline-block;
+}
+.History_Main h4 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
     font-size: 1.2em;
-    font-family: sans-serif;
-    border-bottom-style: solid;
-    border-bottom-color: #4F3824;
-    border-bottom-width: thin;
-    padding: 6px 0px 6px 0px;
-    font-weight: bold;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
 }
-#NI_Body h4 {
-    margin-bottom: 5px;
-    font-size: 1.15em;
+.History_Of_Norfolk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.History_Of_Norfolk img{
+    max-width: 500px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.History_KAVHA_Buildings h5 {
     text-align: center;
     font-family: sans-serif;
-    padding: 6px 0px 6px 0px;
-    font-weight: bold;
+    letter-spacing: .1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
 }
-#NI_Body h5 {
-     margin-bottom: 5px;
-    font-size: 1.05em;
+.History_Major_Buildings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5em;
+    letter-spacing: .05em;
     font-family: sans-serif;
-    padding: 6px 0px 6px 0px;
-    font-weight: bold;
+    font-weight: 300;
 }
-#NI_Main_Content h2 {
+.History_Major_Buildings_List ul li {
+    margin: 0px 0px 20px 10px;
+    padding-left: 10px;
+    border-left: medium solid black;
+}
+@media(min-width: 1200px) {
+    .History_Major_Buildings {
+        flex-direction: row;
+    }
+    .History_Major_Buildings_List ul li {
+        margin-left: 20px;
+    }
+    .History_KAVHA_Buildings h5 {
+        margin-bottom: 20px;
+    }
+}
+@media(min-width: 900px) {
+    .History_Main {
+        padding: 150px 10px 10px 10px;
+    }
+}
+/*End History Page styling*/
+
+/*Begin Locations Page styling*/
+.Locations_Main {
+    padding: 75px 10px 10px 10px;
+}
+.Locations_Main h2 {
     display: none;
 }
-td {
-    border-style: solid;
-    border-color: #4F3824;
-    border-width: thin;
-    padding: 5px;
+.Locations_Main h3 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: thin solid black;
+    display: inline-block;
 }
-th {
-    border-style: solid;
-    border-color: #4F3824;
-    border-width: thin;
-    padding: 5px;
+.Locations_Main h4 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
 }
+.Locations_Main img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0px auto 20px auto;
+}
+.Page_Locations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Locations_Main h5 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.Locations_Main section {
+    border-bottom: thin solid black;
+    margin-bottom: 20px;
+}
+.Longridge {
+    border-style: none !important;
+}
+@media(min-width: 900px) {
+    .Locations_Main {
+        padding: 150px 10px 10px 10px;
+    }
+}
+/*End Locations Page styling*/
 
-
-
-
-/*<----------------------------------End Rational Styling------------------------------>*/
+/*Begin Gallery Page styling*/
+.Galleries_Main {
+    padding: 75px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Photo_Gallery {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Galleries_Main h3 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: thin solid black;
+    display: inline-block;
+}
+.Photo_Gallery img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: thick solid black;
+}
+.Photo_Gallery img:hover {
+    border: thin solid black;
+}
+@media(min-width: 900px) {
+    .Galleries_Main {
+        padding: 150px 10px 10px 10px;
+    }
+}
+/*End Gallery Page styling*/
