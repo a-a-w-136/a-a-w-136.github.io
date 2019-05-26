@@ -66,6 +66,7 @@ indexbody {
 #Rational_Body {
     padding: 20px;
     max-width: 900px;
+    margin: auto;
 }
 #Rational_Body h2 {
     display: none;
