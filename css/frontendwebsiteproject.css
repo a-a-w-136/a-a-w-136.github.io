@@ -6,6 +6,59 @@ html {
 * , *:after, *:before {
     box-sizing: inherit;
 }
+
+indexbody {
+    display: flex;
+}
+#indexheader {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background-color: #003249;
+    color: white;
+}
+#indexmain {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#indexmain a {
+    text-decoration: none;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    border: thin solid black;
+    margin: 5px;
+    color: black;
+    font-family: sans-serif;
+    letter-spacing: .08em;
+}
+#indexfooter {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: #003249;
+    color: white;
+}
+
 /*Start Landing-Header Styling*/
 body {
     height: 100%;
