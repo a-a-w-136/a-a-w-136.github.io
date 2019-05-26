@@ -65,6 +65,9 @@ indexbody {
 }
 #Rational_Body {
     padding: 20px;
+    
+}
+#Rational_Main {
     max-width: 900px;
     margin: auto;
 }
