@@ -58,6 +58,66 @@ indexbody {
     background-color: #003249;
     color: white;
 }
+#Rational_Body img {
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+}
+#Rational_Body {
+    padding: 20px;
+    max-width: 900px;
+}
+#Rational_Body h2 {
+    display: none;
+}
+#Rational_Body h3 {
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: .1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#Rational_Main ol {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-family: sans-serif;
+    font-weight: 300;
+    list-style: decimal;
+    margin-left: 30px;
+}
+#Rational_Main ul {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-family: sans-serif;
+    font-weight: 300;
+    list-style: circle;
+    margin-left: 30px;
+}
+#Rational_Main ul a {
+    color: black;
+    text-decoration: none;
+}
+
+#Wire_Frames li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+#Rational_Main table {
+    margin-bottom: 20px;
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-family: sans-serif;
+}
+#Rational_Main table td {
+    padding: 10px;
+    border: thin solid black;
+}
 
 /*Start Landing-Header Styling*/
 body {
