@@ -6,7 +6,7 @@ html {
 * , *:after, *:before {
     box-sizing: inherit;
 }
-
+/*Start Rational and Index styling*/
 indexbody {
     display: flex;
 }
@@ -104,7 +104,6 @@ indexbody {
     color: black;
     text-decoration: none;
 }
-
 #Wire_Frames li {
     display: flex;
     flex-direction: column;
@@ -121,6 +120,8 @@ indexbody {
     padding: 10px;
     border: thin solid black;
 }
+/*End Rational and Index styling*/
+
 
 /*Start Landing-Header Styling*/
 body {
