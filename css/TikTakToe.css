@@ -9,10 +9,10 @@ html{
     grid-row: 1/2;
 */
 
-@media (min-width: 310px)
+@media (min-width: 315px)
 {
     body{
-        background-color: purple;
+        background-color: blue;
     }
 }
 
