@@ -10,7 +10,9 @@ html{
 */
 @media (min-width: 200px)
 {
-    background-color: red;
+    body{
+        background-color: red;
+    }
 }
 
 @media (min-width: 620px) {
