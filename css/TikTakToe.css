@@ -9,7 +9,12 @@ html{
     grid-row: 1/2;
 */
 
-
+@media (min-width: 200px)
+{
+    body{
+        background-color: green;;
+    }
+}
 
 
 @media (min-width: 620px) {
