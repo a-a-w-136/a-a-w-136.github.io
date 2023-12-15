@@ -25,6 +25,7 @@ html{
             "gameBoard gameControls";
         justify-content: center;
         grid-gap: 10px;
+        background-color: yellow;
     }
     
     #GameBoard{
