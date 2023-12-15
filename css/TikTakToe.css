@@ -9,9 +9,13 @@ html{
     grid-row: 1/2;
 */
 
-body{
-    background-color: red;
+@media (min-width: 2px)
+{
+    body{
+        background-color: red;
+    }
 }
+
 
 
 @media (min-width: 620px) {
