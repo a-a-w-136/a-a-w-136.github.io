@@ -9,7 +9,7 @@ html{
     grid-row: 1/2;
 */
 
-@media (min-width: 321px)
+@media (min-width: 320px)
 {
     body{
         background-color: green;
