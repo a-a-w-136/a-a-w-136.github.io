@@ -1,0 +1,57 @@
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/* grid-column: 2/3;
+    grid-row: 1/2;
+*/
+
+
+
+
+@media (min-width: 620px) {
+
+    body{
+        display: grid;
+        grid-template-columns: 450px 150px;
+        grid-template-areas: 
+            "gameBoard gameStatistics"
+            "gameBoard gameControls";
+        justify-content: center;
+        grid-gap: 10px;
+        background-color: lightblue;
+    }
+    
+    #GameBoard{
+        display: grid;
+        grid-template-columns: repeat(3, 150px); 
+        grid-template-rows: repeat(3, 150px);
+        grid-area: gameBoard;
+        justify-self: center;
+    }
+    button{
+        padding: 0px;
+        margin: 0px;
+        border-width: 0px;
+    }
+    .Square{
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+    }
+    #GameControls{
+        grid-area: gameControls;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+    }
+    #GameStatistics{
+        grid-area: gameStatistics;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+    }
+}
