@@ -18,7 +18,7 @@ html{
 
 
 
-@media (min-width: 620px) {
+@media (min-width: 500px) {
 
     body{
         display: grid;
