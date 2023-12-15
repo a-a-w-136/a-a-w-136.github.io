@@ -8,12 +8,6 @@ html{
 /* grid-column: 2/3;
     grid-row: 1/2;
 */
-
-body
-{
-    background-color: lightblue;
-}
-
 @media (min-width: 200px)
 {
     background-color: red;
