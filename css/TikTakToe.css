@@ -8,7 +8,7 @@ html{
 /* grid-column: 2/3;
     grid-row: 1/2;
 */
-@media (min-width: 200px)
+@media (min-width: 1px)
 {
     body{
         background-color: red;
