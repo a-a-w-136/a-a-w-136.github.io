@@ -9,11 +9,9 @@ html{
     grid-row: 1/2;
 */
 
-@media (min-width: 100px)
+body
 {
-    html{
-        background-color: green;;
-    }
+    background-color: lightblue;
 }
 
 
@@ -27,7 +25,6 @@ html{
             "gameBoard gameControls";
         justify-content: center;
         grid-gap: 10px;
-        background-color: lightblue;
     }
     
     #GameBoard{
