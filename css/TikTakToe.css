@@ -1,0 +1,117 @@
+html{
+    box-sizing: border-box;
+    height: 450px;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+nav{
+   padding: 10px; 
+   display: flex;
+   justify-content: space-evenly;
+   background-color: #003249;
+   font-family: sans-serif;
+}
+nav a{
+    color: white;
+    font-size: 0.75em;
+    text-decoration: none;
+}
+body{
+    height: 100%;
+}
+#Game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: lightblue;
+    padding-top: 20px;
+    justify-content: center;
+}
+#GameBoard{
+    display: grid;
+    grid-template-columns: repeat(3, 75px); 
+    grid-template-rows: repeat(3, 75px);
+    grid-area: gameBoard;
+}
+#GameControls{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#GameControls button{
+    margin: 5px 10px 0px 10px;
+}
+#GameStatistics dl{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 10px;
+}
+#GameStatistics dl dt{
+    justify-self: right;
+}
+
+@media (min-height: 390px)
+{
+    html{
+        height: 100%;
+    }
+}
+
+@media (min-width: 620px) {
+    
+    #Game{
+        display: grid;
+        grid-template-columns: 300px 150px;
+        grid-template-rows: 150px 150px;
+        grid-template-areas: 
+            "gameBoard gameStatistics"
+            "gameBoard gameControls";
+        justify-content: center;
+        align-items: normal;
+        grid-column-gap: 50px;
+        align-content: center;
+    }
+    
+    #GameBoard{
+        display: grid;
+        grid-template-columns: repeat(3, 100px); 
+        grid-template-rows: repeat(3, 100px);
+        grid-area: gameBoard;
+        
+    }
+    #GameControls{
+        grid-area: gameControls;
+        width: 100%;
+        align-items: stretch;
+    }
+    #GameControls button{
+        height: 45%;
+        margin: 0px;
+    }
+    #GameControls button{
+        margin: 5% 0% 0% 0%;
+    }
+    #GameStatistics{
+        grid-area: gameStatistics;
+        border-width: 1px 0px 1px 0px;
+        border-style: solid;
+        border-color: black;
+    }
+    #GameStatistics dl{
+        width: 80%;
+        height: 80%;
+        margin: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+    }
+    #GameStatistics dl dt{
+        justify-self: right;
+    }
+    
+}
