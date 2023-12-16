@@ -1,1 +1,47 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./js/TikTakToe.js"></script>
+    <script type="module" src="./js/TikTakToeEngine.js"></script>
+    <link rel="stylesheet" href="./css/cssReset.css">
+    <link rel="stylesheet" href="./css/TikTakToe.css">
+    <title>TikTakToe</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="">Source Code</a>
+        <a href="">C# Implementation</a>
+    </nav>
+    <section id="Game">
+        <section id="GameBoard">
+            <button id="0" onclick="engine.MakeMove(0)" class="Square"></button>
+            <button id="1" onclick="engine.MakeMove(1)" class="Square"></button>
+            <button id="2" onclick="engine.MakeMove(2)" class="Square"></button>
+            <button id="3" onclick="engine.MakeMove(3)" class="Square"></button>
+            <button id="4" onclick="engine.MakeMove(4)" class="Square"></button>
+            <button id="5" onclick="engine.MakeMove(5)" class="Square"></button>
+            <button id="6" onclick="engine.MakeMove(6)" class="Square"></button>
+            <button id="7" onclick="engine.MakeMove(7)" class="Square"></button>
+            <button id="8" onclick="engine.MakeMove(8)" class="Square"></button>
+        </section>
+        <section id="GameControls">
+            <button id="CpuStart" onclick="engine.StartCpuFirst()">Start Game - CPU first</button>
+            <button id="HumanStart" onclick="engine.StartHumanFirst()">Start Game - Human first</button>
+        </section>
+        <section id="GameStatistics">
+            <dl>
+                <dt>X Wins:&nbsp;</dt>
+                <dd id="xWins">58%</dd>
+                <dt>O Wins:&nbsp;</dt>
+                <dd id="oWins">28%</dd>
+                <dt>Draw:&nbsp;</dt>
+                <dd id="draw">12%</dd>
+            </dl>
+        </section>
+    </section>
+  
+</body>
+</html>
