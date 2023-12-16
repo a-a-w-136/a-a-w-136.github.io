@@ -6,17 +6,18 @@ html{
 *, *:before, *:after{
     box-sizing: inherit;
 }
-nav{
-   padding: 10px; 
+nav{ 
    display: flex;
-   justify-content: space-evenly;
+   flex-direction: column;
    background-color: #003249;
    font-family: sans-serif;
+   padding: 2px 0px 2px 10px;
 }
 nav a{
     color: white;
     font-size: 0.75em;
     text-decoration: none;
+    margin: 2px 0px 2px 0px;
 }
 body{
     height: 100%;
