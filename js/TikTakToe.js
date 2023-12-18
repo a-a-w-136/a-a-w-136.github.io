@@ -43,6 +43,7 @@ class TikTakToeProgressions
             return;
         }
 
+        // Duplicates each progression in the progressions remainingSquares. Eg if one move has been made duplicate each 8 times as each one will have 8 different next possible moves.
         let completedMoves = 9 - remainingSquares;
         let expandedMovesCollection = new Array();
         for(let y = 0; y < progessions.length; y++)
@@ -376,11 +377,7 @@ class GameProgression
                 return 0;
             }
            });
-        if(this.VerifyProgression() === true)
-        {
-
-        }
-        else
+        if(this.VerifyProgression() === false)
         {
             throw new Exception(
                 "Max 9 moves per progression." 
@@ -390,7 +387,6 @@ class GameProgression
                 + "Move number must ascend from 1 by 1."
                 + "Each move must only occupy a unique Square.");
         }
-        this.VerifyProgression();
 
         this._winningCombinations = 
         [ 
