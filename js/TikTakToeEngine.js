@@ -119,17 +119,5 @@ class Engine{
 const engine = new Engine(document);
 window.engine = engine;
 
-const body = document.querySelector("body");
-const mql = window.matchMedia("(max-width: 319px)", "");
-function screenWidthTooSmall(e)
-{
-    if(e.matches)
-    {
-        document.querySelector("body").innerHTML = "<p>The screen width is too small for this application. Refresh the page. After screen resizing.</p>";
-    }
-}
-
-mql.addEventListener("change", screenWidthTooSmall);
-
 
 
