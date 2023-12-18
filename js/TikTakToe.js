@@ -270,54 +270,6 @@ class AI
     }
     CalculateNextMove(possibleProgressions, nextToMove)
     {
-        // 1. This determines what the next move should be. 
-
-        // foreach of the possible progressions
-        // 1. Find a completed progression that matches
-        // 2. If the completed progression results in a first mover win, second mover win or draw, accumulate the result.
-        // let outcomes = new Array();
-        // for(let possibleProgression = 0; possibleProgression < possibleProgressions.length; possibleProgression++)
-        // {
-        //     let firstMoverWins = 0;
-        //     let secondMoverWins = 0;
-        //     let tie = 0;
-            
-        //     for(let completeProgression = 0; completeProgression < this.#progressions.length; completeProgression++)
-        //     {
-        //         let match = true;
-        //         for(let move = 0; move < possibleProgressions[possibleProgression].length; move++)
-        //         {
-        //             if(possibleProgressions[possibleProgression][move].Square !== this.#progressions[completeProgression].GetMove(move).Square)
-        //             {
-        //                 match = false;
-        //             }
-        //         }
-        //         if(match === true)
-        //         {
-        //             let outcome = this.#progressions[completeProgression].GetOutcome();
-        //             switch(outcome)
-        //             {
-        //                 case 0:
-        //                 {
-        //                     tie++;
-        //                     break;
-        //                 }
-        //                 case 1: 
-        //                 {
-        //                     firstMoverWins++;
-        //                     break;
-        //                 }
-        //                 case 2:
-        //                 {
-        //                     secondMoverWins++;
-        //                     break;
-        //                 }
-        //             }
-        //         }
-        //     }
-        //     outcomes.push(new Array(tie, firstMoverWins, secondMoverWins, possibleProgression));
-        // }
-
         let outcomes = new Array();
         for(let possibleProgression = 0; possibleProgression < possibleProgressions.length; possibleProgression++)
         {
