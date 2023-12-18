@@ -1,70 +1,219 @@
 html{
     box-sizing: border-box;
-    height: 450px;
 }
 
 *, *:before, *:after{
     box-sizing: inherit;
 }
-nav{ 
-   display: flex;
-   flex-direction: column;
-   background-color: #003249;
-   font-family: sans-serif;
-   padding: 2px 0px 2px 10px;
-}
-nav a{
-    color: white;
-    font-size: 0.75em;
-    text-decoration: none;
-    margin: 2px 0px 2px 0px;
-}
-body{
-    height: 100%;
-}
-#Game{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    background-color: lightblue;
-    padding-top: 20px;
-    justify-content: center;
-}
-#GameBoard{
-    display: grid;
-    grid-template-columns: repeat(3, 75px); 
-    grid-template-rows: repeat(3, 75px);
-    grid-area: gameBoard;
-}
-#GameControls{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-}
-#GameControls button{
-    margin: 5px 10px 0px 10px;
-}
-#GameStatistics dl{
-    display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin-top: 10px;
-}
-#GameStatistics dl dt{
-    justify-self: right;
+
+
+@media (min-width:320px) and (max-height: 449px){
+    html{
+        padding: 5px;
+        height: 450px;
+    }
+    nav{ 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        grid-column-gap: 10px;
+        background-color: #003249;
+        font-family: sans-serif;
+        height: 15%;
+        padding: 5px;
+     }
+     nav a{
+         color: white;
+         font-size: 0.75em;
+         text-decoration: none;
+     }
+     body{
+         height: 100%;
+         margin: 0px;
+     }
+     #Game{
+         height: 85%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         background-color: lightblue;
+         justify-content: center;
+     }
+     #GameBoard{
+         display: grid;
+         grid-template-columns: repeat(3, 75px); 
+         grid-template-rows: repeat(3, 75px);
+         grid-area: gameBoard;
+     }
+     #GameControls{
+         width: 300px;
+         display: flex;
+         flex-direction: column;
+     }
+     #GameControls button{
+         margin: 5px 10px 0px 10px;
+     }
+     
+     #GameStatistics dl{
+         display: grid;
+         grid-template-columns: 150px 150px;
+         grid-template-rows: 1fr 1fr 1fr;
+         margin: 10px 0px 0px 0px;
+     }
+     #GameStatistics dl dt{
+         justify-self: right;
+     }
 }
 
-@media (min-height: 390px)
-{
+
+@media (min-width:320px) and (min-height: 450px){
     html{
+        padding: 5px;
         height: 100%;
     }
+    nav{ 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        grid-column-gap: 10px;
+        background-color: #003249;
+        font-family: sans-serif;
+        height: 15%;
+        padding: 5px;
+     }
+     nav a{
+         color: white;
+         font-size: 0.75em;
+         text-decoration: none;
+     }
+     body{
+         height: 100%;
+         margin: 0px;
+     }
+     #Game{
+         height: 85%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         background-color: lightblue;
+         justify-content: center;
+     }
+     #GameBoard{
+         display: grid;
+         grid-template-columns: repeat(3, 75px); 
+         grid-template-rows: repeat(3, 75px);
+         grid-area: gameBoard;
+     }
+     #GameControls{
+         width: 300px;
+         display: flex;
+         flex-direction: column;
+     }
+     #GameControls button{
+         margin: 5px 10px 0px 10px;
+     }
+     
+     #GameStatistics dl{
+         display: grid;
+         grid-template-columns: 150px 150px;
+         grid-template-rows: 1fr 1fr 1fr;
+         margin: 10px 0px 0px 0px;
+     }
+     #GameStatistics dl dt{
+         justify-self: right;
+     }
 }
 
-@media (min-width: 620px) {
-    
+
+
+@media (min-width: 620px) and (max-height: 449px) {
+    html{
+        height: 450px;
+        padding: 5px;
+    }
+    body{
+        height: 100%;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 10%;
+    }
     #Game{
+        height: 90%;
+        display: grid;
+        grid-template-columns: 300px 150px;
+        grid-template-rows: 150px 150px;
+        grid-template-areas: 
+            "gameBoard gameStatistics"
+            "gameBoard gameControls";
+        justify-content: center;
+        align-items: normal;
+        grid-column-gap: 50px;
+        align-content: center;
+    }
+    
+    #GameBoard{
+        display: grid;
+        grid-template-columns: repeat(3, 100px); 
+        grid-template-rows: repeat(3, 100px);
+        grid-area: gameBoard;
+        
+    }
+    #GameControls{
+        grid-area: gameControls;
+        width: 100%;
+        align-items: stretch;
+    }
+    #GameControls button{
+        height: 45%;
+        margin: 0px;
+    }
+    #GameControls button{
+        margin: 5% 0% 0% 0%;
+    }
+    #GameStatistics{
+        grid-area: gameStatistics;
+        border-width: 1px 0px 1px 0px;
+        border-style: solid;
+        border-color: black;
+    }
+    #GameStatistics dl{
+        width: 80%;
+        height: 80%;
+        margin: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+    }
+    #GameStatistics dl dt{
+        justify-self: right;
+    }
+    
+}
+
+
+
+@media (min-width: 620px) and (min-height: 450px) {
+    html{
+        height: 100vh;
+        padding: 5px;
+    }
+    body{
+        height: 100%;
+    }
+    nav{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        height: 10%;
+    }
+    #Game{
+        height: 90%;
         display: grid;
         grid-template-columns: 300px 150px;
         grid-template-rows: 150px 150px;
