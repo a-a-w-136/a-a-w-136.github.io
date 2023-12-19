@@ -379,7 +379,7 @@ class GameProgression
            });
         if(this.VerifyProgression() === false)
         {
-            throw new Exception(
+            throw new Error(
                 "Max 9 moves per progression." 
                 + "Second to move must make every even move." 
                 + "First to move must make every odd move"
