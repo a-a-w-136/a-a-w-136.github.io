@@ -544,7 +544,8 @@ class GameProgression
             {
                 return 2;
             }
-        
+            owner_1_count = 0;
+            owner_2_count = 0;
         }
         if(ownedSquareCount === 24)
         {
