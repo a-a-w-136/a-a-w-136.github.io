@@ -164,6 +164,7 @@ class GameBoard
             return  new Move(this.#moves[moveNumber - 1].Player, this.#moves[moveNumber - 1].MoveNumber, this.#moves[moveNumber - 1].Square);
         }
     }
+  
 }
 
 class AI
@@ -409,6 +410,15 @@ class GameProgression
     {
         return this._progression[moveNumber];
     }
+    GetMoves()
+    {
+        let moves = new Array();
+        for(let i = 0; i < this._progression.length; i++)
+        {
+            moves.push(new Move(this._progression[i].Player, this._progression[i].MoveNumber, this._progression[i].Square));
+        }
+        return moves;
+    }
     VerifyProgression()
     {
         // Verfiy player order
@@ -490,7 +500,6 @@ class GameProgression
     }
     #MarkGameBoard(squareName, owner)
     {
-        // Should be private as it incorrect squareName and owner would corrupt the object.  
         this._winningCombinations.forEach((combination) => {
             combination.forEach((square) => {
                 if(square.name === squareName)
@@ -535,8 +544,7 @@ class GameProgression
             {
                 return 2;
             }
-            owner_1_count = 0;
-            owner_2_count = 0;
+        
         }
         if(ownedSquareCount === 24)
         {
@@ -553,27 +561,27 @@ class TestSuite
     {
         // Don't run this unless you have time to wait. SHouldn't take longer than an hour. Items that need to be checked is: 9! * (9! - 1) = 131 681 894 400.
         // ******************** (GameProgression)Test 1: Test the progessions produced by the AI are all unique. 
-        // {
-        //     const tikTakToeProgressions = new TikTakToeProgressions();
-        //     const progressions = new Array();
+        {
+            const tikTakToeProgressions = new TikTakToeProgressions();
+            const progressions = new Array();
 
-        //     let progression = tikTakToeProgressions.GetProgression(0);
-        //     let index = 0;
-        //     while(progression !== undefined)
-        //     {
-        //         index++;
-        //         progressions.push(progression);
-        //         progression = tikTakToeProgressions.GetProgression(index);
-        //     }
-        //     if(this.ValidateProgressions(progressions) === true)
-        //     {
-        //         console.log("Test 1: Passed.");
-        //     }
-        //     else
-        //     {
-        //         console.log("Test 1: Failed.");
-        //     }
-        // }
+            let progression = tikTakToeProgressions.GetProgression(0);
+            let index = 0;
+            while(progression !== undefined)
+            {
+                index++;
+                progressions.push(progression);
+                progression = tikTakToeProgressions.GetProgression(index);
+            }
+            if(this.ValidateProgressions(progressions) === true)
+            {
+                console.log("Test 1: Passed.");
+            }
+            else
+            {
+                console.log("Test 1: Failed.");
+            }
+        }
 
 
         // ******************** (GameProgression)Test 2: Test a collection of progressions that are not unique are invalid.
@@ -682,6 +690,7 @@ class TestSuite
     }
     ValidateProgressions(progressions)
     {
+       
         // Assumes the moves are in order
         /* 
             How the validation occurs. Given the following are the only progessions:
@@ -694,22 +703,29 @@ class TestSuite
             - When comparing P2 and P3 all the number are the same and (y === progressions.length - 1) is true. This signifies that there are now elements that are different.
 
         */
+           
+
         for(let i = 0; i < progressions.length; i++)
         {
+            let moves1 = progressions[i].GetMoves();
             for(let p = 0; p < progressions.length; p++)
-            {
+            {              
+                
+               
                 if(p != i)
                 {
-                    for(let y = 0; y < progressions[i].length; y++)
+                    let moves2 = progressions[p].GetMoves();
+
+                    for(let y = 0; y < moves1.length; y++)
                     {
-                        if(progressions[i][y].Square !== progressions[p][y].Square)
+                        if(moves1[y].Square !== moves2[y].Square)
                         {
                             break;
                         }
                         if(y === progressions.length - 1)
                         {
-                            // If the loop has not broken by now. Not all progessions are unique
-                            // This means that for moves 1 - 8 both progessions move to the same squares.
+                            // If the loop has not broken by now then moves2 == moves1
+                            // This means that for moves 1 - 8, both progessions move to the same squares.
                             return false;
                         }
                     }
@@ -720,4 +736,4 @@ class TestSuite
     }
 }
 
-export {GameBoard, AI};
+export {GameBoard, AI, TestSuite};

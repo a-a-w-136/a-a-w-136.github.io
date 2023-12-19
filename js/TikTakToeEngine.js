@@ -1,4 +1,4 @@
-import { GameBoard, AI } from "./TikTakToe.js";
+import { GameBoard, AI, TestSuite } from "./TikTakToe.js";
 
 class Engine{
     #gameBoard;
@@ -119,5 +119,7 @@ class Engine{
 const engine = new Engine(document);
 window.engine = engine;
 
+var tes = new TestSuite();
+tes.RunTests();
 
 
