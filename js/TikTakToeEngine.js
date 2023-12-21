@@ -119,7 +119,4 @@ class Engine{
 const engine = new Engine(document);
 window.engine = engine;
 
-var tes = new TestSuite();
-tes.RunTests();
-
 
