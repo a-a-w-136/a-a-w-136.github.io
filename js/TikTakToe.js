@@ -574,7 +574,7 @@ class TestSuite
                 progressions.push(progression);
                 progression = tikTakToeProgressions.GetProgression(index);
             }
-            if(this.ValidateProgressions(progressions) === true)
+            if(this.VerifyUniqunessOfProgressions(progressions) === true)
             {
                 console.log("Test 1: Passed.");
             }
@@ -604,7 +604,7 @@ class TestSuite
             progressions.push(progression_1);
             progressions.push(progression_2);
 
-            if(this.ValidateProgressions(progressions) === true)
+            if(this.VerifyUniqunessOfProgressions(progressions) === true)
             {
                 console.log("Test 2: Failed.");
             }
@@ -689,7 +689,7 @@ class TestSuite
             }
         }
     }
-    ValidateProgressions(progressions)
+    VerifyUniqunessOfProgressions(progressions)
     {
        
         // Assumes the moves are in order
@@ -711,8 +711,6 @@ class TestSuite
             let moves1 = progressions[i].GetMoves();
             for(let p = 0; p < progressions.length; p++)
             {              
-                
-               
                 if(p != i)
                 {
                     let moves2 = progressions[p].GetMoves();
@@ -721,7 +719,7 @@ class TestSuite
                     {
                         if(moves1[y].Square !== moves2[y].Square)
                         {
-                            break;
+                            break; // moves2 is different to moves1
                         }
                         if(y === progressions.length - 1)
                         {
@@ -731,6 +729,7 @@ class TestSuite
                         }
                     }
                 }
+                
             }
         }
         return true;
