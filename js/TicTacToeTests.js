@@ -199,11 +199,11 @@ class TicTacToeProgressionsTests
             progressions[40320] = progressions[0];
             if(this.Prove40320BlocksAreUnique(progressions) === null)
             {
-                console.log("Pass - 40320 blocks are in the correct order.");
+                console.log("Fail - 40320 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 40320 blocks are not in the correct order.");
+                console.log("Pass - 40320 blocks are not in the correct order.");
             }
             progressions[40320] = progression40320;
 
@@ -213,11 +213,11 @@ class TicTacToeProgressionsTests
             progressions[5039] = progressions[5040];
             if(this.Prove5040BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 5040 blocks are in the correct order.");
+                console.log("Fail - 5040 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 5040 blocks are not in the correct order.");
+                console.log("Pass - 5040 blocks are not in the correct order.");
             }
             progressions[5039] = progression5039;
 
@@ -227,11 +227,11 @@ class TicTacToeProgressionsTests
             progressions[719] = progressions[720];
             if(this.Prove720BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 720 blocks are in the correct order.");
+                console.log("Fail - 720 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 720 blocks are not in the correct order.");
+                console.log("Pass - 720 blocks are not in the correct order.");
             }
             progressions[719] = progression719;
 
@@ -241,11 +241,11 @@ class TicTacToeProgressionsTests
             progressions[119] = progressions[120];
             if(this.Prove120BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 120 blocks are in the correct order.");
+                console.log("Fail - 120 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 120 blocks are not in the correct order.");
+                console.log("Pass - 120 blocks are not in the correct order.");
             }
             progressions[119] = progression119;
 
@@ -255,11 +255,11 @@ class TicTacToeProgressionsTests
             progressions[23] = progressions[24];
             if(this.Prove24BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 24 blocks are in the correct order.");
+                console.log("Fail - 24 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 24 blocks are not in the correct order.");
+                console.log("Pass - 24 blocks are not in the correct order.");
             }
             progressions[23] = progression23;
 
@@ -269,11 +269,11 @@ class TicTacToeProgressionsTests
             progressions[5] = progressions[6];
             if(this.Prove6BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 6 blocks are in the correct order.");
+                console.log("Fail - 6 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 6 blocks are not in the correct order.");
+                console.log("Pass - 6 blocks are not in the correct order.");
             }
             progressions[5] = progression5;
 
@@ -283,11 +283,11 @@ class TicTacToeProgressionsTests
             progressions[1] = progressions[2];
             if(this.Prove2BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 2 blocks are in the correct order.");
+                console.log("Fail - 2 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 2 blocks are not in the correct order.");
+                console.log("Pass - 2 blocks are not in the correct order.");
             }
             progressions[1] = progression1;
 
@@ -297,11 +297,11 @@ class TicTacToeProgressionsTests
             progressions[0] = progressions[1];
             if(this.Prove1BlocksAreUnique(progressions, 0) === null)
             {
-                console.log("Pass - 1 blocks are in the correct order.");
+                console.log("Fail - 1 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail - 1 blocks are not in the correct order.");
+                console.log("Pass - 1 blocks are not in the correct order.");
             }
             progressions[0] = progression0;
 
