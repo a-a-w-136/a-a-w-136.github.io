@@ -199,55 +199,111 @@ class TicTacToeProgressionsTests
             progressions[40320] = progressions[0];
             if(Prove40320BlocksAreUnique(progressions) === null)
             {
-                console.log("Pass.");
+                console.log("Pass - 40320 blocks are in the correct order.");
             }
             else
             {
-                console.log("Fail.");
+                console.log("Fail - 40320 blocks are not in the correct order.");
             }
             progressions[40320] = progression40320;
 
-            // // Force a different organisation of the progressions - level 2
-            // Progression progression5039 = (Progression)progressions[5039];
-            // progressions[5039] = progressions[5040];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove5040BlocksAreUnique(progressions, 0));
-            // progressions[5039] = progression5039;
+            // Force a different organisation of the progressions - level 2
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 5040 BLOCK SHOULD BE TESTED.
+            let progression5039 = progressions[5039];
+            progressions[5039] = progressions[5040];
+            if(Prove5040BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 5040 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 5040 blocks are not in the correct order.");
+            }
+            progressions[5039] = progression5039;
 
-            // // Force a different organisation of the progressions - level 3
-            // Progression progression719 = (Progression)progressions[719];
-            // progressions[719] = progressions[720];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove720BlocksAreUnique(progressions, 0));
-            // progressions[719] = progression719;
+            // Force a different organisation of the progressions - level 3
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 720 BLOCK SHOULD BE TESTED.
+            let progression719 = progressions[719];
+            progressions[719] = progressions[720];
+            if(Prove720BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 720 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 720 blocks are not in the correct order.");
+            }
+            progressions[719] = progression719;
 
-            // // Force a different organisation of the progressions - level 4
-            // Progression progression119 = (Progression)progressions[119];
-            // progressions[119] = progressions[120];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove120BlocksAreUnique(progressions, 0));
-            // progressions[119] = progression119;
+            // Force a different organisation of the progressions - level 4
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 120 BLOCK SHOULD BE TESTED.
+            let progression119 = progressions[119];
+            progressions[119] = progressions[120];
+            if(Prove120BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 120 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 120 blocks are not in the correct order.");
+            }
+            progressions[119] = progression119;
 
-            // // Force a different organisation of the progressions - level 5
-            // Progression progression23 = (Progression)progressions[23];
-            // progressions[23] = progressions[24];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove24BlocksAreUnique(progressions, 0));
-            // progressions[23] = progression23;
+            // Force a different organisation of the progressions - level 5
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 24 BLOCK SHOULD BE TESTED.
+            let progression23 = progressions[23];
+            progressions[23] = progressions[24];
+            if(Prove24BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 24 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 24 blocks are not in the correct order.");
+            }
+            progressions[23] = progression23;
 
-            // // Force a different organisation of the progressions - level 6
-            // Progression progression5 = (Progression)progressions[5];
-            // progressions[5] = progressions[6];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove6BlocksAreUnique(progressions, 0));
-            // progressions[5] = progression5;
+            // Force a different organisation of the progressions - level 6
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 6 BLOCK SHOULD BE TESTED.
+            let progression5 = progressions[5];
+            progressions[5] = progressions[6];
+            if(Prove6BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 6 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 6 blocks are not in the correct order.");
+            }
+            progressions[5] = progression5;
 
-            // // Force a different organisation of the progressions - level 7
-            // Progression progression1 = (Progression)progressions[1];
-            // progressions[1] = progressions[2];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove2BlocksAreUnique(progressions, 0));
-            // progressions[1] = progression1;
+            // Force a different organisation of the progressions - level 7
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 2 BLOCK SHOULD BE TESTED.
+            let progression1 = progressions[1];
+            progressions[1] = progressions[2];
+            if(Prove2BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 2 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 2 blocks are not in the correct order.");
+            }
+            progressions[1] = progression1;
 
-            // // Force a different organisation of the progressions - level 8
-            // Progression progression0 = (Progression)progressions[0];
-            // progressions[0] = progressions[1];
-            // Assert.IsNotNull(ProgressionUniqueness.Prove1BlocksAreUnique(progressions, 0));
-            // progressions[0] = progression0;
+            // Force a different organisation of the progressions - level 8
+            // NOTE: THIS TEST IS INCOMPLETE. EVERY 1 BLOCK SHOULD BE TESTED.
+            let progression0 = progressions[0];
+            progressions[0] = progressions[1];
+            if(Prove1BlocksAreUnique(progressions, 0) === null)
+            {
+                console.log("Pass - 1 blocks are in the correct order.");
+            }
+            else
+            {
+                console.log("Fail - 1 blocks are not in the correct order.");
+            }
+            progressions[0] = progression0;
 
         }
         { // ******************** (AI)Test X: // How to test moving to square 4 has the best odds for winning or drawing the game??
