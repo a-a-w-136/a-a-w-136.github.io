@@ -9,26 +9,29 @@ class TicTacToeProgressionsTests
     }
     RunTests()
     {
-         /* This test is to show that each of the TicTacToe progressions are unique.
-             * 
-             * Instead of taking each progression and testing that it is different to every other progression, taking at a minimum of (362,880(362,880 - 1)) / 2 == 65,840,765,760 operations.
-             * 
-             * 1. Number of ways the fill a TicTacToe board = 9! = 362,880 = number of progressions
-             * 2. 9 possible options for the first move
-             * 3. Number of progressions with the first move to square 0, sqaure 1, square 2, square 3, etc is 9!/9 = 40,320. (To prove)
-             * 4. Foreach of the 40,320 that have a unique first move, there should be 9!/9/8 5040 progressions that move to each unoccupied square. (To prove)
-             * 5. Foreach of the 5040 that have a unique first move and second move there should be 9!/9/8/7 720 progressions that move to each unoccupied square. (To prove)
-             * 6. The pattern continues...(To prove)
-             * 
-             * 
-             * It works by knowing the progressions are in a particular order. If they are in a particular order the above is true.
-             * For example
-             *  1. Checks that all first moves to square 0 are from 0 - 40319 (where 0 is the first)
-             *  2. Checks 0 - 5039 the first moves are to square 0 and the second moves are to square 1.
-             * 
-             * Works, but it could be clearer. I think that the idea here can be used as a basis for refactoring.
-             * This is more an example of how to test uniquness in a more efficient way than a minimum 65,840,765,760. Instead it is closer to 362,880 * 9 or 2,903,040 operations.
-             */
+           /* This test is to show that each of the TicTacToe progressions are unique.
+            * 
+            * Instead of taking each progression and testing that it is different to every other progression, taking at a minimum of (362,880(362,880 - 1)) / 2 == 65,840,765,760 operations.
+            * 
+            * BASE INFORMATION
+            * 1. Number of ways the fill a TicTacToe board = 9! = 362,880 = number of progressions
+            * 2. 9 possible options for the first move
+            * 3. Number of progressions with the first move to square 0, sqaure 1, square 2, square 3, etc is 9!/9 = 40,320. (To prove)
+            * 4. Foreach of the 40,320 that have a unique first move, there should be 9!/9/8 5040 progressions that move to each unoccupied square. (To prove)
+            * 5. Foreach of the 5040 that have a unique first move and second move there should be 9!/9/8/7 720 progressions that move to each unoccupied square. (To prove)
+            * 6. The pattern continues...(To prove)
+            * 
+            * 
+            * IT WORKS BY KNOWING THAT THE PROGRESSIONS ARE IN A PARTICULAR ORDER. 
+            * 1. Each of the functions called to prove the required conditions returns either null or an integer.
+            * 2. If null is returned the block is unique, but if an inter is returned it does not mean that the 
+            *    progressions are not unique.
+            * 3. The functions must be called in order to prove uniqueness.
+            * 4. All the testing function are tested for a failure when the progressions are not in the expected order.
+            * 
+            * Works, but it could be clearer. I think that the idea here can be used as a basis for refactoring.
+            * This is more an example of how to test uniquness in a more efficient way than a minimum 65,840,765,760. Instead it is closer to 362,880 * 9 or 2,903,040 operations.
+            */
         {
             let ticTacToeProgressions = new TikTakToeProgressions();
             let progressions = new Array();
