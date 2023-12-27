@@ -48,11 +48,11 @@ class TicTacToeProgressionsTests
             // PART 1
             if(this.Prove40320BlocksAreUnique(progressions) === null)
             {
-                console.log("Passed - 40320 Blocks Are Unique");
+                console.log("Pass - 40320 Blocks Are Unique");
             }
             else
             {
-                console.log("Failed - 40320 Blocks Are Not Unique");
+                console.log("Fail - 40320 Blocks Are Not Unique");
             }
 
             // PART 2
@@ -67,11 +67,11 @@ class TicTacToeProgressionsTests
             }
             if(passed5040)
             {
-                console.log("Passed - 5040 Blocks Are Unique");
+                console.log("Pass - 5040 Blocks Are Unique");
             }
             else
             {
-                console.log("Failed - 5040 Blocks Are Not Unique");
+                console.log("Fail - 5040 Blocks Are Not Unique");
             }
 
             // PART 3
@@ -86,11 +86,11 @@ class TicTacToeProgressionsTests
             }
             if(passed720)
             {
-                console.log("Passed - 720 Blocks Are Unique");
+                console.log("Pass - 720 Blocks Are Unique");
             }
             else
             {
-                console.log("Failed - 720 Blocks Are Not Unique");
+                console.log("Fail - 720 Blocks Are Not Unique");
             }
 
             // PART 4
@@ -105,11 +105,11 @@ class TicTacToeProgressionsTests
             }
             if(passed120)
             {
-                console.log("Passed - 120 Blocks Are Unique");
+                console.log("Pass - 120 Blocks Are Unique");
             }
             else
             {
-                console.log("Failed - 120 Blocks Are Not Unique");
+                console.log("Fail - 120 Blocks Are Not Unique");
             }
 
             // PART 5
@@ -124,11 +124,11 @@ class TicTacToeProgressionsTests
             }
             if(passed24)
             {
-                console.log("Passed - 24 Blocks Are Unique");
+                console.log("Pass - 24 Blocks Are Unique");
             }
             else
             {
-                console.log("Failed - 24 Blocks Are Not Unique");
+                console.log("Fail - 24 Blocks Are Not Unique");
             }
 
              // PART 6
@@ -143,11 +143,11 @@ class TicTacToeProgressionsTests
              }
              if(passed6)
              {
-                 console.log("Passed - 6 Blocks Are Unique");
+                 console.log("Pass - 6 Blocks Are Unique");
              }
              else
              {
-                 console.log("Failed - 6 Blocks Are Not Unique");
+                 console.log("Fail - 6 Blocks Are Not Unique");
              }
 
             // PART 7
@@ -162,11 +162,11 @@ class TicTacToeProgressionsTests
             }
             if(passed2)
             {
-                console.log("Passed - 2 Blocks Are Unique");
+                console.log("Pass - 2 Blocks Are Unique");
             }
             else
             {
-                console.log("Failed - 2 Blocks Are Not Unique");
+                console.log("Fail - 2 Blocks Are Not Unique");
             }
 
              // PART 7
@@ -181,11 +181,11 @@ class TicTacToeProgressionsTests
              }
              if(passed1)
              {
-                 console.log("Passed - 1 Blocks Are Unique");
+                 console.log("Pass - 1 Blocks Are Unique");
              }
              else
              {
-                 console.log("Failed - 1 Blocks Are Not Unique");
+                 console.log("Fail - 1 Blocks Are Not Unique");
              }
 
 
