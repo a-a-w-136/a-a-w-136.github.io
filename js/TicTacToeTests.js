@@ -197,7 +197,7 @@ class TicTacToeProgressionsTests
             // Proves that the 40320 - 80639 move 1 is not to position 0.
             let progression40320 = progressions[40320];
             progressions[40320] = progressions[0];
-            if(Prove40320BlocksAreUnique(progressions) === null)
+            if(this.Prove40320BlocksAreUnique(progressions) === null)
             {
                 console.log("Pass - 40320 blocks are in the correct order.");
             }
@@ -211,7 +211,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 5040 BLOCK SHOULD BE TESTED.
             let progression5039 = progressions[5039];
             progressions[5039] = progressions[5040];
-            if(Prove5040BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove5040BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 5040 blocks are in the correct order.");
             }
@@ -225,7 +225,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 720 BLOCK SHOULD BE TESTED.
             let progression719 = progressions[719];
             progressions[719] = progressions[720];
-            if(Prove720BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove720BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 720 blocks are in the correct order.");
             }
@@ -239,7 +239,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 120 BLOCK SHOULD BE TESTED.
             let progression119 = progressions[119];
             progressions[119] = progressions[120];
-            if(Prove120BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove120BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 120 blocks are in the correct order.");
             }
@@ -253,7 +253,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 24 BLOCK SHOULD BE TESTED.
             let progression23 = progressions[23];
             progressions[23] = progressions[24];
-            if(Prove24BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove24BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 24 blocks are in the correct order.");
             }
@@ -267,7 +267,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 6 BLOCK SHOULD BE TESTED.
             let progression5 = progressions[5];
             progressions[5] = progressions[6];
-            if(Prove6BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove6BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 6 blocks are in the correct order.");
             }
@@ -281,7 +281,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 2 BLOCK SHOULD BE TESTED.
             let progression1 = progressions[1];
             progressions[1] = progressions[2];
-            if(Prove2BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove2BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 2 blocks are in the correct order.");
             }
@@ -295,7 +295,7 @@ class TicTacToeProgressionsTests
             // NOTE: THIS TEST IS INCOMPLETE. EVERY 1 BLOCK SHOULD BE TESTED.
             let progression0 = progressions[0];
             progressions[0] = progressions[1];
-            if(Prove1BlocksAreUnique(progressions, 0) === null)
+            if(this.Prove1BlocksAreUnique(progressions, 0) === null)
             {
                 console.log("Pass - 1 blocks are in the correct order.");
             }
