@@ -517,7 +517,7 @@ class TicTacToeProgressionsTests
             progressions[startUnique24].GetMove(5).Square
         ];
         let squares = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-        let startIndex = startUnique720;
+        let startIndex = startUnique24;
         let endIndex = startIndex + blockSize;
         for(let square = 0; square < squares.length; square++)
         {
@@ -562,7 +562,7 @@ class TicTacToeProgressionsTests
             progressions[startUnique6].GetMove(6).Square
         ];
         let squares = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-        let startIndex = startUnique720;
+        let startIndex = startUnique6;
         let endIndex = startIndex + blockSize;
         for(let square = 0; square < squares.length; square++)
         {
@@ -609,7 +609,7 @@ class TicTacToeProgressionsTests
             progressions[startUnique2].GetMove(7).Square
         ];
         let squares = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-        let startIndex = startUnique720;
+        let startIndex = startUnique2;
         let endIndex = startIndex + blockSize;
         for(let square = 0; square < squares.length; square++)
         {
