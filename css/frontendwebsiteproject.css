@@ -84,16 +84,16 @@ html {
         height:20%;
     }
  }
- @media (max-height: 680px) and (max-width: 1070px)
+ @media (max-height: 750px) and (max-width: 1070px)
  {
     html{
-        height: 680px;
+        height: 750px;
     }
  }
- @media (max-height: 250px) and (min-width: 1070px)
+ @media (max-height: 310px) and (min-width: 1070px)
  {
     html{
-        height: 250px;
+        height: 310px;
     }
  }
 /*End Index styling*/
