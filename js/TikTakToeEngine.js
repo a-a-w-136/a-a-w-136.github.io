@@ -93,9 +93,11 @@ class Engine{
         let xWins = outcomes[1] / total;
         let oWins = outcomes[2] / total;
 
-        this.document.getElementById("xWins").innerHTML = (xWins.toFixed(2) * 100) + "%";
-        this.document.getElementById("oWins").innerHTML = (oWins.toFixed(2) * 100) + "%";
-        this.document.getElementById("draw").innerHTML = (draw.toFixed(2) * 100) + "%";
+        
+
+        this.document.getElementById("xWins").innerHTML = (xWins * 100).toString().slice(0, 4) + "%";
+        this.document.getElementById("oWins").innerHTML = (oWins * 100).toString().slice(0, 4) + "%";
+        this.document.getElementById("draw").innerHTML = (draw * 100).toString().slice(0, 4) + "%";
     }
     #IsGameOver()
     {
