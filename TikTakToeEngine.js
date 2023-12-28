@@ -1,4 +1,5 @@
-import { GameBoard, AI } from "./TikTakToe.js";
+import { GameBoard, AI} from "./TikTakToe.js";
+import { TicTacToeProgressionsTests } from "./TicTacToeTests.js";
 
 class Engine{
     #gameBoard;
@@ -92,9 +93,9 @@ class Engine{
         let xWins = outcomes[1] / total;
         let oWins = outcomes[2] / total;
 
-        this.document.getElementById("xWins").innerHTML = (xWins.toInt() * 100) + "%";
-        this.document.getElementById("oWins").innerHTML = (oWins.toInt() * 100) + "%";
-        this.document.getElementById("draw").innerHTML = (draw.toInt() * 100) + "%";
+        this.document.getElementById("xWins").innerHTML = (xWins.toFixed(2) * 100) + "%";
+        this.document.getElementById("oWins").innerHTML = (oWins.toFixed(2) * 100) + "%";
+        this.document.getElementById("draw").innerHTML = (draw.toFixed(2) * 100) + "%";
     }
     #IsGameOver()
     {
@@ -118,3 +119,8 @@ class Engine{
 
 const engine = new Engine(document);
 window.engine = engine;
+
+const ticTacToeProgressionsTests = new TicTacToeProgressionsTests();
+window.ticTacToeProgressionsTests = ticTacToeProgressionsTests;
+
+

@@ -43,6 +43,7 @@ class TikTakToeProgressions
             return;
         }
 
+        // Duplicates each progression in the progressions remainingSquares. Eg if one move has been made duplicate each 8 times as each one will have 8 different next possible moves.
         let completedMoves = 9 - remainingSquares;
         let expandedMovesCollection = new Array();
         for(let y = 0; y < progessions.length; y++)
@@ -163,6 +164,7 @@ class GameBoard
             return  new Move(this.#moves[moveNumber - 1].Player, this.#moves[moveNumber - 1].MoveNumber, this.#moves[moveNumber - 1].Square);
         }
     }
+  
 }
 
 class AI
@@ -270,8 +272,6 @@ class AI
     }
     CalculateNextMove(possibleProgressions, nextToMove)
     {
-        // 1. This determines what the next move should be. 
-
         let outcomes = new Array();
         for(let possibleProgression = 0; possibleProgression < possibleProgressions.length; possibleProgression++)
         {
@@ -306,7 +306,7 @@ class AI
         }
         return possibleProgressions[bestOutCome][possibleProgressions[bestOutCome].length - 1].Square;
     }
-    GetOutcomes(arrayOfMoves) // progression is an array of moves.
+    GetOutcomes(arrayOfMoves)
     {
         let firstMoverWins = 0;
         let secondMoverWins = 0;
@@ -317,7 +317,7 @@ class AI
             let match = true;
             for(let move = 0; move < arrayOfMoves.length; move++)
             {
-                if(arrayOfMoves[move].Square !== this.#progressions[completeProgression].GetMove(move).Square)
+                if(arrayOfMoves[move].Square !== this.#progressions[completeProgression].GetMove(move + 1).Square)
                 {
                     match = false;
                 }
@@ -378,13 +378,9 @@ class GameProgression
                 return 0;
             }
            });
-        if(this.VerifyProgression() === true)
+        if(this.VerifyProgression() === false)
         {
-
-        }
-        else
-        {
-            throw new Exception(
+            throw new Error(
                 "Max 9 moves per progression." 
                 + "Second to move must make every even move." 
                 + "First to move must make every odd move"
@@ -392,7 +388,6 @@ class GameProgression
                 + "Move number must ascend from 1 by 1."
                 + "Each move must only occupy a unique Square.");
         }
-        this.VerifyProgression();
 
         this._winningCombinations = 
         [ 
@@ -413,7 +408,16 @@ class GameProgression
     }
     GetMove(moveNumber)
     {
-        return this._progression[moveNumber];
+        return this._progression[moveNumber - 1];
+    }
+    GetMoves()
+    {
+        let moves = new Array();
+        for(let i = 0; i < this._progression.length; i++)
+        {
+            moves.push(new Move(this._progression[i].Player, this._progression[i].MoveNumber, this._progression[i].Square));
+        }
+        return moves;
     }
     VerifyProgression()
     {
@@ -496,7 +500,6 @@ class GameProgression
     }
     #MarkGameBoard(squareName, owner)
     {
-        // Should be private as it incorrect squareName and owner would corrupt the object.  
         this._winningCombinations.forEach((combination) => {
             combination.forEach((square) => {
                 if(square.name === squareName)
@@ -552,178 +555,5 @@ class GameProgression
         return -1;
     }
 }
-class TestSuite
-{
-    constructor(){}
-    RunTests()
-    {
-        // Don't run this unless you have time to wait. SHouldn't take longer than an hour. Items that need to be checked is: 9! * (9! - 1) = 131 681 894 400.
-        // ******************** (GameProgression)Test 1: Test the progessions produced by the AI are all unique. 
-        // {
-        //     const tikTakToeProgressions = new TikTakToeProgressions();
-        //     const progressions = new Array();
 
-        //     let progression = tikTakToeProgressions.GetProgression(0);
-        //     let index = 0;
-        //     while(progression !== undefined)
-        //     {
-        //         index++;
-        //         progressions.push(progression);
-        //         progression = tikTakToeProgressions.GetProgression(index);
-        //     }
-        //     if(this.ValidateProgressions(progressions) === true)
-        //     {
-        //         console.log("Test 1: Passed.");
-        //     }
-        //     else
-        //     {
-        //         console.log("Test 1: Failed.");
-        //     }
-        // }
-
-
-        // ******************** (GameProgression)Test 2: Test a collection of progressions that are not unique are invalid.
-        {
-            let progressions = new Array();
-
-            let progression_1 = new Array();
-            let m1p1 = new Move(1, 1, 0);
-            progression_1.push(m1p1);
-            let m2p1 = new Move(1, 2, 0);
-            progression_1.push(m1p1);
-            
-            let progression_2 = new Array();
-            let m1p2 = new Move(1, 1, 0);
-            progression_2.push(m1p2);
-            let m2p2 = new Move(1, 2, 0);
-            progression_2.push(m1p2);
-
-            progressions.push(progression_1);
-            progressions.push(progression_2);
-
-            if(this.ValidateProgressions(progressions) === true)
-            {
-                console.log("Test 2: Failed.");
-            }
-            else
-            {
-                console.log("Test 2: Passed.");
-            }
-        }
-
-        // ******************** Test 3: Test first mover winning a progression
-        // {
-
-        // }
-
-        // ******************** Test 4: Test second mover winning a progression
-        // {
-        //     // 353603
-
-        //}
-
-        // // ********************(TikTakToe) Test 5: Test a draw progression
-        {
-            // Progression: 0, 1, 2, 3, 4, 6, 5, 8, 7
-            let ttt = new TikTakToeProgressions();
-            if(ttt.GetProgression(7).GetOutcome() === 0)
-            {
-                console.log("Test 5: Passed.")
-            }
-            else
-            {
-                console.log("Test 5: Failed.")
-            }
-        }
-
-        // ******************** Test 5: Test all complete progressions lead to a win or draw.
-        // {
-
-        // }
-
-        // ******************** (GameBoard)Test 6: Test MakeMove when parameter(square) is occupied throw exception
-        //{
-
-        //}
-
-        // ******************** (AI)Test 8: Test ai module returns a winning move square
-        {
-            
-        }
-        // ******************** (AI)Test 9: Test ai module returns a tie move square
-        {
-      
-        }
-
-        // ******************** (GameBoard) Test 9: Test first mover and second mover is set correctly
-        {
-
-        }
-
-        // ******************** (GameBoard) Test 9: Test move number is set correctly
-        {
-
-        }
-
-        // ******************** (GameBoard) Test 9: Test square is set correctly
-        {
-
-        }
-
-        { // ******************** (AI)Test X: // How to test moving to square 4 has the best odds for winning or drawing the game??
-            let gameBoard = new GameBoard();
-            gameBoard.MakeMove(0);
-            gameBoard.MakeMove(2);
-            gameBoard.MakeMove(7);
-            let ai = new AI();
-            if(ai.GetNextMove(gameBoard) === 4)
-            {
-                console.log("Test X: Passed.")
-            }
-            else
-            {
-                console.log("Test X Failed.")
-            }
-        }
-    }
-    ValidateProgressions(progressions)
-    {
-        // Assumes the moves are in order
-        /* 
-            How the validation occurs. Given the following are the only progessions:
-
-            Progression 1: 0, 1, 2, 3, 4, 5, 6, 7, 8        
-            Progression 2: 0, 2, 1, 3, 4, 5, 6, 7, 8
-            Progression 3: 0, 2, 1, 3, 4, 5, 6, 7, 8
-            
-            - When comparing P1[1] and P2[1] the inner break is executed. This signifies that the P1 and P2 are different.
-            - When comparing P2 and P3 all the number are the same and (y === progressions.length - 1) is true. This signifies that there are now elements that are different.
-
-        */
-        for(let i = 0; i < progressions.length; i++)
-        {
-            for(let p = 0; p < progressions.length; p++)
-            {
-                if(p != i)
-                {
-                    for(let y = 0; y < progressions[i].length; y++)
-                    {
-                        if(progressions[i][y].Square !== progressions[p][y].Square)
-                        {
-                            break;
-                        }
-                        if(y === progressions.length - 1)
-                        {
-                            // If the loop has not broken by now. Not all progessions are unique
-                            // This means that for moves 1 - 8 both progessions move to the same squares.
-                            return false;
-                        }
-                    }
-                }
-            }
-        }
-        return true;
-    }
-}
-
-export {GameBoard, AI};
+export {GameBoard, AI, TikTakToeProgressions};
