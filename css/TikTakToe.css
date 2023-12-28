@@ -20,6 +20,9 @@ nav{
     position: absolute;
     padding:5px;
 }
+#GameStatistics dl dd{
+    margin-inline-start: 0px;
+}
 
 @media (min-width:320px) and (max-height: 449px){
     html{
@@ -228,6 +231,7 @@ nav{
     }
     #GameStatistics dl dt{
         justify-self: right;
+        text-wrap: nowrap;
     }
     
 }
