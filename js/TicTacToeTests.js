@@ -44,7 +44,13 @@ class TicTacToeProgressionsTests
                 progression = ticTacToeProgressions.GetProgression(progressionNumber);
             }
 
-
+            // !Null doesn't mean there are not unique, but null does mean they are unique. 
+            /* Example: Run the test and it will pass if the progressions are in the right order,
+            *           then swap progressions[0] with progressions[40320]. The progressions will
+            *           still be unique but this test suite will fail becuase the progressions
+            *           are not in the right order. Same goes for every function in the 
+            *           ProgressionsUniqueness class.
+            */        
             // PART 1
             if(this.Prove40320BlocksAreUnique(progressions) === null)
             {
