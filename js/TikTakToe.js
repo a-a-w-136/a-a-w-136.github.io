@@ -306,7 +306,7 @@ class AI
         }
         return possibleProgressions[bestOutCome][possibleProgressions[bestOutCome].length - 1].Square;
     }
-    GetOutcomes(arrayOfMoves) // progression is an array of moves.
+    GetOutcomes(arrayOfMoves)
     {
         let firstMoverWins = 0;
         let secondMoverWins = 0;
@@ -317,7 +317,7 @@ class AI
             let match = true;
             for(let move = 0; move < arrayOfMoves.length; move++)
             {
-                if(arrayOfMoves[move].Square !== this.#progressions[completeProgression].GetMove(move).Square)
+                if(arrayOfMoves[move].Square !== this.#progressions[completeProgression].GetMove(move + 1).Square)
                 {
                     match = false;
                 }
